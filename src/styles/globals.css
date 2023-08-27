@@ -1,0 +1,56 @@
+/* styles/globals.css */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+
+/* Box sizing */
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Body */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e4e4e4;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b0b0b0;
+}
+
+/* Handle when active (being dragged) */
+::-webkit-scrollbar-thumb:active {
+  background: #888888;
+}
