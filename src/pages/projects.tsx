@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import { NextPage } from 'next';
-import { projectCardContent, projectsPageHeader } from '../../content/projectsContent';
-import { PORTFOLIO_OWNER_NAME } from '../../content/siteConfig';
+import { projectCardContent, projectsPageDescription, projectsPageHeader } from '../../content/projectsContent';
 
 interface Project {
   title: string;
@@ -23,10 +22,11 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => (
   <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
     <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-[70vw] h-[70vh] max-h-[80vh] overflow-y-auto relative">
       <button
-        className="absolute top-4 right-4 text-white py-1 px-3 hover:text-gray bg-blue-500 rounded-full transition-colors z-50"
+        className="absolute top-4 right-4 text-white py-0.5 px-2 hover:text-gray bg-blue-500 rounded-full transition-colors z-50"
         onClick={onClose}
+        aria-label='close button'
       >
-        x
+        &#x2715;
       </button>
       <h2 className="text-xl font-semibold mb-4">{project.title}</h2>
       <p className="text-gray-500 mt-2">{project.type}</p>
@@ -62,6 +62,7 @@ const ProjectPage: NextPage = () => {
     <div className="mx-auto mt-8 px-4 md:px-8">
       <Head>
         <title>{projectsPageHeader}</title>
+        <meta name="description" content={projectsPageDescription} />
       </Head>
       <h1 className="text-4xl font-bold mt-[7.5vh] mb-8 text-center">Projects</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

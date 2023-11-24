@@ -1,11 +1,11 @@
 // pages/contact.tsx
-import Image from 'next/image';
 import Head from 'next/head';
+import Image from 'next/image';
 import { NextPage } from 'next';
 
 import { PORTFOLIO_OWNER_EMAIL, PORTFOLIO_OWNER_NAME, PORTFOLIO_OWNER_PLACE } from '../../content/siteConfig';
 import Button from '../components/Button';
-import { contactCardContent, contactPageHeader, contactSocials } from '../../content/contactContent';
+import { contactCardContent, contactPageDescription, contactPageHeader, contactSocials } from '../../content/contactContent';
 
 
 const Contact: NextPage = () => {
@@ -13,14 +13,13 @@ const Contact: NextPage = () => {
   return (
     <>
       <Head>
-        <title>
-          {contactPageHeader}
-        </title>
+        <title>{contactPageHeader}</title>
+        <meta name="description" content={contactPageDescription} />
       </Head>
       <h1 className="text-4xl font-bold mt-[7.5vh] mb-8 text-center">Contact Me</h1>
       <div className="flex justify-center items-center">
         <div className="w-full max-w-[800px] bg-white dark:bg-gray-800 rounded-md shadow-md flex mb-8">
-          <div className='w-2/5 h-full overflow-hidden rounded-full md:rounded-md ml-2 mt-2 md:ml-0 md:mt-0'>
+          <div className='w-2/5 h-full overflow-hidden rounded-md'>
             <Image
               src="/images/contact-img.jpeg"
               alt="Contact Picture"
@@ -45,7 +44,7 @@ const Contact: NextPage = () => {
               ))}
             </div>
             <div className="flex items-center space-x-2 mt-4">
-              <Button text="Send a message" href={`mailto:${PORTFOLIO_OWNER_EMAIL}`} />
+              <Button text="Send a message" href={`mailto:${PORTFOLIO_OWNER_EMAIL}`} icon={<Image src="/icons/send-icon.png" width="32" height="32" alt='send icon' className="w-5 h-5" />} />
             </div>
           </div>
         </div>

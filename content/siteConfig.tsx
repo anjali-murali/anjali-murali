@@ -17,12 +17,14 @@ export const siteLinks: SiteLink[] = [
 // Name of portfolio owner
 export const PORTFOLIO_OWNER_NAME = 'Anjali Murali';
 
+// Resume of portfolio owner
+export const PORTFOLIO_OWNER_RESUME = 'resume/Resume_AnjaliMurali.pdf';
+
 // Place of portfolio owner
 export const PORTFOLIO_OWNER_PLACE = "Fort Collins, Colorado";
 
 // Location icon
 export const ICON_LOCATION = "/icons/locationpin-icon.png";
-
 
 // Email of portfolio owner
 export const PORTFOLIO_OWNER_EMAIL = "Anjali.Murali@colostate.edu";

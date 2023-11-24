@@ -4,7 +4,10 @@ import { PORTFOLIO_OWNER_NAME } from "./siteConfig";
 // Projects page header
 export const projectsPageHeader = `${PORTFOLIO_OWNER_NAME} | Projects`;
 
-// Sample project data
+// Projects page meta description
+export const projectsPageDescription = `This page contains details of highlighted projects done by ${PORTFOLIO_OWNER_NAME}.`;
+
+// Project data
 export const projectCardContent = [
     {
         id: 1,

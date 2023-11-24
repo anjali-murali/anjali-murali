@@ -34,7 +34,9 @@ const MobileNavbar: React.FC = () => {
   return (
     <div className="md:hidden">
       <div className="flex justify-between items-center mb-4">
-        <button onClick={toggleDrawer} className={`cursor-pointer`}>
+        <button onClick={toggleDrawer}
+         className={`cursor-pointer`}
+         aria-label='mobile menu open'>
           <div
             className={`rounded-full p-2 text-white bg-[rgb(0,0,182)]`}
             style={{
@@ -72,6 +74,7 @@ const MobileNavbar: React.FC = () => {
         <button
           className="absolute top-2 right-2 text-white hover:text-gray-800"
           onClick={closeDrawer}
+          aria-label='mobile menu close'
         >
           X
         </button>

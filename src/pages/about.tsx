@@ -1,10 +1,10 @@
 // pages/about.tsx
-import { NextPage } from 'next';
-import Image from 'next/image';
 import Head from 'next/head';
+import Image from 'next/image';
+import { NextPage } from 'next';
 
 import { useIsMobile } from '../context/useIsMobile';
-import { aboutPageHeader, aboutImgSrc, backgroundContent, educationData, skillsData, volunteeringData } from '../../content/aboutContent';
+import { aboutImgSrc, aboutPageHeader, aboutPageDescription, backgroundContent, educationData, skillsData, volunteeringData } from '../../content/aboutContent';
 
 const About: NextPage = () => {
   const { isMobile } = useIsMobile();
@@ -30,6 +30,7 @@ const About: NextPage = () => {
     <div className="mx-auto mt-8">
       <Head>
         <title>{aboutPageHeader}</title>
+        <meta name="description" content={aboutPageDescription} />
       </Head>
       <h1 className="text-4xl font-bold mt-[7.5vh] mb-8 text-center">About Me</h1>
       {/*About photo section*/}

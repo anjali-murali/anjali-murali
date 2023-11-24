@@ -4,6 +4,10 @@ import { PORTFOLIO_OWNER_NAME } from "./siteConfig";
 // Experience page header
 export const experiencePageHeader = `${PORTFOLIO_OWNER_NAME} | Experience`;
 
+// Experience page meta description
+export const experiencePageDescription = `This page contains details of relevant work experience of ${PORTFOLIO_OWNER_NAME}.`;
+
+// Experience items content
 export const experienceTimelineItems = [
   {
     company: {

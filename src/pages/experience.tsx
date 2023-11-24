@@ -3,13 +3,14 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { NextPage } from 'next';
 
-import { experiencePageHeader, experienceTimelineItems } from '../../content/experienceContent';
+import { experiencePageDescription, experiencePageHeader, experienceTimelineItems } from '../../content/experienceContent';
 
 const ExperiencePage: NextPage = () => {
   return (
     <div className="mx-auto mt-8">
       <Head>
         <title>{experiencePageHeader}</title>
+        <meta name="description" content={experiencePageDescription} />
       </Head>
       <h1 className="text-4xl font-bold mt-[7.5vh] mb-8 text-center">My Work Experience</h1>
       <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-12">

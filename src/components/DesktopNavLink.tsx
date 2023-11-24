@@ -1,14 +1,14 @@
-// src/components/NavLink.tsx
+// src/components/DesktopNavLink.tsx
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-interface NavLinkProps {
+interface DesktopNavLinkProps {
   path: string;
   children: React.ReactNode;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ path, children }) => {
+const DesktopNavLink: React.FC<DesktopNavLinkProps> = ({ path, children }) => {
   const router = useRouter();
   const isActive = router.pathname === path;
 
@@ -21,4 +21,4 @@ const NavLink: React.FC<NavLinkProps> = ({ path, children }) => {
   );
 };
 
-export default NavLink;
+export default DesktopNavLink;

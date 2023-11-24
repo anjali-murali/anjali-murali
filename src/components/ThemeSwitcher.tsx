@@ -4,11 +4,11 @@ import { useTheme } from 'next-themes';
 
 const useThemeSwitcher = () => {
 	const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
-	const { theme, setTheme } = useTheme();
+	const { resolvedTheme, setTheme } = useTheme();
 
 	useEffect(() => {
-		setIsDarkTheme(theme === 'dark');
-	}, [theme]);
+		setIsDarkTheme(resolvedTheme === 'dark');
+	}, [resolvedTheme]);
 
 	const toggleTheme = () => {
 		setTheme(isDarkTheme ? 'light' : 'dark');
@@ -24,6 +24,7 @@ const ThemeSwitcher: React.FC = () => {
 		<button
 			onClick={toggleTheme}
 			className="flex items-center focus:outline-none"
+			aria-label='Theme toggle'
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"

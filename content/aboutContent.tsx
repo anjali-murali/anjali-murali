@@ -1,9 +1,11 @@
-// content/aboutContent.ts
-import React from 'react';
+// content/aboutContent.tsx
 import { PORTFOLIO_OWNER_NAME } from './siteConfig';
 
 // About page header
 export const aboutPageHeader = `${PORTFOLIO_OWNER_NAME} | About`;
+
+// About page meta description
+export const aboutPageDescription = `This page contains background info of ${PORTFOLIO_OWNER_NAME}.`;
 
 // About page image 
 export const aboutImgSrc = "/images/about-img.jpg";

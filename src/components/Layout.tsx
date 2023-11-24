@@ -1,10 +1,10 @@
 // src/components/Layout.tsx
-import React, { ReactNode } from 'react';
+import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
 interface LayoutProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {

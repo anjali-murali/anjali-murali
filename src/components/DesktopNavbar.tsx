@@ -1,7 +1,7 @@
 // src/components/DesktopNavbar.tsx
 import React from 'react';
 import Link from 'next/link';
-import NavLink from './NavLink';
+import DesktopNavLink from './DesktopNavLink';
 import ThemeSwitcher from './ThemeSwitcher';
 import { PORTFOLIO_OWNER_NAME, SiteLink, siteLinks } from '../../content/siteConfig';
 
@@ -16,9 +16,9 @@ const DesktopNavbar: React.FC = () => {
       <div className="rounded-full bg-[rgb(0,0,182)] text-white p-5 pl-6 pr-6 absolute inset-y-0 left-1/2 transform -translate-x-1/2">
         <div className="flex space-x-3 justify-center">
         {siteLinks.map((link: SiteLink, index: number) => (
-        <NavLink key={index} path={link.path}>
+        <DesktopNavLink key={index} path={link.path}>
           {link.label}
-        </NavLink>
+        </DesktopNavLink>
       ))}
 
         </div>
